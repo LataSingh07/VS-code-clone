@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #1e1e1e;
+  color: #d4d4d4;
+}
+
+.vscode-clone {
+  display: grid;
+  grid-template-areas: 
+    "topbar topbar"
+    "sidebar explorer"
+    "sidebar editor"
+    "statusbar statusbar";
+  grid-template-columns: 50px 1fr;
+  grid-template-rows: 30px 150px 1fr 25px;
+  height: 100vh;
+}
+
+.top-bar {
+  grid-area: topbar;
+  background-color: #007acc;
+  color: white;
+  padding: 5px 10px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  background-color: #252526;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 10px;
+}
+
+.sidebar .icon {
+  margin: 10px 0;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.file-explorer {
+  grid-area: explorer;
+  background-color: #1e1e1e;
+  padding: 10px;
+  font-size: 13px;
+  border-right: 1px solid #333;
+}
+
+.file-explorer ul {
+  list-style: none;
+  margin-top: 10px;
+}
+
+.file-explorer li {
+  padding: 4px 0;
+  cursor: pointer;
+}
+
+.editor {
+  grid-area: editor;
+  display: flex;
+  flex-direction: column;
+  background-color: #1e1e1e;
+}
+
+.editor .tab {
+  background-color: #2d2d2d;
+  padding: 5px 10px;
+  font-size: 13px;
+  border-bottom: 1px solid #333;
+}
+
+.editor textarea {
+  flex: 1;
+  background-color: #1e1e1e;
+  color: #d4d4d4;
+  border: none;
+  padding: 10px;
+  font-family: monospace;
+  font-size: 14px;
+  resize: none;
+}
+
+.status-bar {
+  grid-area: statusbar;
+  background-color: #007acc;
+  color: white;
+  padding: 4px 10px;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
